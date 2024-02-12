@@ -1,0 +1,3 @@
+The author search feature is nice and easy to use, would have liked to see it search for items that have some of the letters and did not have to be an exact match. The Sort and Filter buttons are easy to use and easy to understand. As well as the find Incomes and find computer jobs. Pop-ups for "Find Most Computer Jobs", "Find Least Computer Jobs", "Find Max Income", and "Find Min Income" are a nice touch, and enjoyed them. 
+
+When I try and use Display state information I get a format error then it does not display anything. Also when I restore the form it opens a new one but does not close the previous one. You had some good documentation and overall good program. 

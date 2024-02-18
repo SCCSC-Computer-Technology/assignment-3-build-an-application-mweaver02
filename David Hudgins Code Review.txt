@@ -1,0 +1,11 @@
+The code compiles well with no errors and populates the datagrid with all fields and all 50 rows upon startup.
+The code has clear comments on what each method is doing. Code is organized well, with button click events being seperated from other methods.
+The form is easy to understand what each button does. Controls are grouped together in practical way.
+I had a couple of exceptions thrown. The Min and max decimal parcing fails if in wrong format, or blank.
+The state drop down won't work on my machine. It actually doesn't crash, but instead gives error message stating unable to reach path where the database file is located.
+I believe this is because of the connection string being given a direct reference to your person computer's file system.
+The sorting buttons work better on your's than on mine, with more options than I had. I had no issues getting the grid to sort.
+I noticed the search feature has to have an exact match to pull up a state by name. I think you could modify the SQL query where clause to look for "contains" instead of having to match.
+The restore button creates a new instance of the form, but doesn't close the old one. I think easy fix by adding this.close() to restore button click event.
+I did mine with Linq statements referencing a DataContext object, instead of adding SQL queries into the table adapter. The upside to your method is the queries are all in one place.
+Overall, I like the way you clearly laid everything out. I think most of the issues stemmed from that connectionString path being local to your computer.

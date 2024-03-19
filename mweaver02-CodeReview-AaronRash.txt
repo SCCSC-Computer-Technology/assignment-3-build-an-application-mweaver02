@@ -1,0 +1,34 @@
+Maxwell Weaver code review by Aaron Rash
+
+First of all, you set the connection string to a location specific to your pc, meaning anyone who downloads your program will have to change it to the correct location on their pc.
+	that being said, when I changed it to the correct spot for me, it worked as intened.
+
+The 'sort computer jobs asc' button has a small error for me. in the query, it can be fixed by putting the column name in [brackets]
+	Order By '# of Computer Jobs' Asc
+		vs
+	Order By [# of Computer Jobs] Asc
+
+this tends to be the case when column names have more than one word, or special characters. I had the same problem on mine
+
+If the min/max textboxs are left blank or have non-decimal values the program crashes.
+	just throw that in a try/catch or some other error handling 
+
+The restore button opens a new form, which isnt ideal in my opinion. you can set the datasource back to the original source and it will have the same effect
+	stateInfoDataGridView.DataSource = statesDBDataSet.StateInfo;
+	
+Searching by the column values is quite different than what I did. You filtered the rows, while I used the queries from the table adapter
+Neither is right but I thought it was worth mentioning alternate solutions.
+Your main search function requires exact matches, and is case sensitive, which is a bit user unfriendly.
+I reccomend using ".contains" or ".StartsWith" instead of "==" in your filter.
+
+	filteredRows = filteredRows.Where(row => row.Field<string>("StateName") == name;
+		vs
+	filteredRows = filteredRows.Where(row => row.Field<string>("StateName").StartsWith(name));
+	
+		then add .ToLower for case insensitive
+		
+	filteredRows = filteredRows.Where(row => row.Field<string>("StateName").ToLower().StartsWith(name));
+
+Your code is well organized and readable, and you have good comments.
+
+That might seem like a lot, but I went deep because I thought it was really interesting to see how different our approach was. I learned some new things off of you.

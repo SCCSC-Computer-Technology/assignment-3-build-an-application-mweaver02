@@ -1,0 +1,5 @@
+First off, the code ran good.
+Second, the comments were nice, it really helped me understand the code and what's going on in the program.
+I liked how many filtering options there were, definitely more than I had.
+The I also liked the restore method that essentially reset the data grid. 
+Overall a good program with a good layout. 
